@@ -1,73 +1,87 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        eslitdll
+  <section>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap mb-10">
+        <div class="w-1/2 my-auto">
+          <div class="text-black-500 font-medium text-lg">Hallo, Saya Ardi</div>
+          <div class="text-black-500 font-thin text-md">
+            Saya adalah seorang freelancer website sejak tahun 2018.
+          </div>
+        </div>
+        <div class="w-1/2 text-right my-auto">
+          <p class="text-md font-thin">Front-developer</p>
+          <p class="text-md font-thin">UiUX Enthusiast</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-5">
+        <div class="w-3/4">
+          <h1 class="text-5xl font-bold leading-snug tracking-wide">
+            Kami akan membantu dengan sebaik mungkin untuk menyelesaikan masalah
+            anda.
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-10">
+        <div class="w-1/2 font-thin text-6xl">
+          01
+        </div>
+        <div class="w-1/2">
+          <p class="leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda,
+            perferendis atque quaerat rerum, numquam laudantium cum sed
+            obcaecati hic illum est, ratione cupiditate quasi consectetur
+            incidunt eveniet enim nam et! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Assumenda, perferendis atque quaerat
+            rerum, numquam laudantium cum sed obcaecati hic illum est, ratione
+            cupiditate quasi consectetur incidunt eveniet enim nam et!
+          </p>
+        </div>
+      </div>
+
+      <div class="paralax__image"></div>
+
+      <h1 class="text-3xl font-bold leading-snug tracking-wide mb-5">
+        Kami telah mengerjakan berbagai projek dasi sekala kecil hingga besar,
+        untuk menambah kepercayaan kepada anda. anda dapat melihat beberaapa
+        portofolio kami dibawah ini.
       </h1>
-      <h2 class="subtitle">
-        My doozie Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+
+      <div class="grid grid-cols-3 gap-4">
+        <CardPorto></CardPorto>
+        <CardPorto></CardPorto>
+        <CardPorto></CardPorto>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import CardPorto from '~/components/CardPorto.vue'
 export default {
   components: {
-    Logo
+    CardPorto
   }
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
+<style type="text/css" scoped="">
 .container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  max-width: 1200px;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+section {
+  padding: 80px 0;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.paralax__image {
+  @apply mb-5;
+  width: 100%;
+  height: 450px;
+  background-image: url('~@/assets/images/people-notes-meeting-team-7095 (1).jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 </style>
